@@ -1,0 +1,60 @@
+'scopeName': 'source.sn'
+'name': 'Sedna'
+'fileTypes': ['SN']
+'patterns': [
+    {
+      'match': '\\b(?i:(0x\\h*))'
+      'name': 'constant.numeric.integer.hexadecimal.sedna'
+    },
+    {
+        'begin': '"'
+        'end': '"'
+        'name': 'string.quoted.double.literal.sedna'
+    },
+    {
+        'begin': '\''
+        'end': '\''
+        'name': 'string.quoted.double.literal.sedna'
+    },
+    {
+        'match': '\\b([Ss]cope)\\b'
+        'name': 'entity.name.type.namespace'
+    },
+    {
+        'match': '\\b(i8|i32|str|bool)\\b'
+        'name': 'storage.type.sedna'
+    },
+    {
+        'match': '\\b(type)\\b'
+        'name': 'storage.class.sedna'
+    },
+    {
+          'begin': '#'
+          'captures':
+            '1':
+              'name': 'punctuation.definition.comment.sedna'
+          'end': '$\\n?'
+          'name': 'comment.line.double-slash.sedna'
+    },
+    {
+        'begin': '/\\#'
+        'captures':
+          '0':
+            'name': 'punctuation.definition.comment.sedna'
+        'end': '\\#/\\n?'
+        'name': 'comment.block.sedna'
+    },
+    {
+        'begin': '\\@'
+        'end': '(\\n)|(\s)'
+        'name': 'entity.name.type.namespace.sedna'
+    },
+    {
+      'match': '\\b(return|when|loop|else)\\b'
+      'name': 'keyword.control.sedna'
+    },
+    {
+        'match': '\\b(fn)\\b'
+        'name': 'storage.type.sedna'
+      }
+]
