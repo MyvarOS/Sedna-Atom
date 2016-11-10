@@ -25,7 +25,7 @@
         'name': 'storage.type.sedna'
     },
     {
-        'match': '\\b(type)\\b'
+        'match': '\\b(type|throw)\\b'
         'name': 'storage.class.sedna'
     },
     {
